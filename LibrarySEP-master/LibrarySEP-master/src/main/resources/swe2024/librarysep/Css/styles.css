@@ -1,0 +1,11 @@
+.button-default:hover, .menu-button-default:hover, .menu-item-default:hover {
+    -fx-border-color: black;
+}
+
+.menu-item-default {
+    -fx-background-color: #5D76A9;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-width: 220px;
+    -fx-pref-height: 40px;
+
+}

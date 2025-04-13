@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0"
+            prefWidth="848.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="swe2024.librarysep.View.MyProfileView">
+    <left>
+        <VBox prefHeight="555.0" prefWidth="222.0" style="-fx-background-color: #5D76A9;">
+            <Button mnemonicParsing="false" prefHeight="52.0" prefWidth="222.0" style="-fx-background-color: #5D76A9;" text="My Profile " textFill="WHITE">
+                <graphic>
+                    <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/person_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+         <Button fx:id="backToDashboard" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackToDashboard" prefHeight="52.0" prefWidth="222.0" style="-fx-background-color: #5D76A9;" text="Back to dashboard" textFill="WHITE">
+            <graphic>
+               <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../images/arrow_back_24dp_FILL0_wght400_GRAD0_opsz24.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+        </VBox>
+    </left>
+    <top>
+        <HBox prefHeight="62.0" prefWidth="848.0" style="-fx-background-color: #002244;" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="42.0" prefWidth="357.0" text="Library management System" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Nova Light Italic" size="24.0" />
+                    </font>
+                    <padding>
+                        <Insets left="40.0" top="10.0" />
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <BorderPane>
+            <top>
+                <HBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #eaeaea;" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label prefHeight="40.0" prefWidth="625.0" text="                  Your current books and reservations">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                  <Label prefHeight="40.0" prefWidth="278.0" text="  Username:">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showUsername" layoutX="336.0" layoutY="10.0" prefHeight="40.0" prefWidth="303.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <TableView fx:id="bookTableViewProfile" prefHeight="326.0" prefWidth="638.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="genreColumn" prefWidth="103.20001065731049" text="Genre" />
+                        <TableColumn fx:id="titleColumn" prefWidth="149.0" text="Title" />
+                        <TableColumn fx:id="authorColumn" prefWidth="144.0" text="Author" />
+                        <TableColumn fx:id="releaseYearColumn" minWidth="0.79998779296875" prefWidth="110.0" text="Release Year" />
+                        <TableColumn fx:id="stateColumn" minWidth="0.0" prefWidth="126.0" text="State" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </center>
+</BorderPane>
